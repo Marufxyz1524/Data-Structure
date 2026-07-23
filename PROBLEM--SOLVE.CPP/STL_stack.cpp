@@ -38,7 +38,10 @@ int main()
 
     st.push(10);
     st.push(20);
+    st.pop();
     st.push(30);
+    st.push(40);
+    st.pop();
 
     while (!st.empty())
     {
