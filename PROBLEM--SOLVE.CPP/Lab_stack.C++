@@ -13,18 +13,12 @@ public:
 
     void pop()
     {
-
         v.pop_back();
     }
 
     int top()
     {
         return v.back();
-    }
-
-    int size()
-    {
-        return v.size();
     }
 
     bool empty()
@@ -39,14 +33,13 @@ int main()
 
     st.push(10);
     st.push(20);
-    st.pop();
     st.push(30);
-    st.push(40);
     st.pop();
+    st.push(40);
 
     while (!st.empty())
     {
-        cout << st.top() << " ";
+        cout << st.top() << "  ";
         st.pop();
     }
 

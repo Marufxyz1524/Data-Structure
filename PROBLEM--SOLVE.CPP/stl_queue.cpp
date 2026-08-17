@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class myStack
+class myQueue
 {
 public:
     vector<int> v;
@@ -13,13 +13,13 @@ public:
 
     void pop()
     {
-
-        v.pop_back();
+        v.erase(v.begin());
     }
 
-    int top()
+    int front()
     {
-        return v.back();
+
+        return v.front();
     }
 
     int size()
@@ -35,19 +35,18 @@ public:
 
 int main()
 {
-    myStack st;
+    myQueue q;
 
-    st.push(10);
-    st.push(20);
-    st.pop();
-    st.push(30);
-    st.push(40);
-    st.pop();
+    q.push(10);
+    q.push(20);
+    q.pop();
+    q.push(30);
+    q.push(40);
 
-    while (!st.empty())
+    while (!q.empty())
     {
-        cout << st.top() << " ";
-        st.pop();
+        cout << q.front() << " ";
+        q.pop();
     }
 
     return 0;
